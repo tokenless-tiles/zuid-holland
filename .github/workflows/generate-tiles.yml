@@ -52,3 +52,10 @@ jobs:
         with:
           name: ${{ env.TARGET }}
           path: ${{ github.workspace }}/${{ env.TARGET }}
+
+      - run: find tiles/ -name '*.pbf' >tiles.list
+      - name: Make list of tiles
+        uses: actions/upload-artifact@v2
+        with:
+          name: tiles.list
+          path: ${{ github.workspace }}/tiles.list
