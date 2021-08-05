@@ -1,11 +1,11 @@
 name: Update PBF file and tiles
 
 on:
-  schedule:
-    - cron: '0 * * * *'
+  #schedule:
+  #  - cron: '0 * * * *'
   push:
     tags: 
-      - test.update*
+      - update.*
 
 jobs:
   generate-tiles:
